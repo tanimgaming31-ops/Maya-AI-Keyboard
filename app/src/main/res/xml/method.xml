@@ -1,0 +1,6 @@
+<input-method xmlns:android="http://schemas.android.com/apk/res/android" android:settingsActivity="com.maya.keyboard.MainActivity" android:supportsSwitchingToNextInputMethod="true">
+    <subtype android:label="@string/lang_bn" android:imeSubtypeLocale="bn_BD" android:imeSubtypeMode="keyboard"/>
+    <subtype android:label="@string/lang_en" android:imeSubtypeLocale="en_US" android:imeSubtypeMode="keyboard"/>
+    <subtype android:label="@string/lang_tl" android:imeSubtypeLocale="fil_PH" android:imeSubtypeMode="keyboard"/>
+    <subtype android:label="@string/lang_id" android:imeSubtypeLocale="id_ID" android:imeSubtypeMode="keyboard"/>
+</input-method>
