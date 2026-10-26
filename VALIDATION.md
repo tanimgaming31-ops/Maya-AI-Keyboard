@@ -1,18 +1,24 @@
 # Validation — 2026-10-26
 
-Performed:
-- 16 executable Java phonetic cases passed.
-- All application Java sources compiled with JDK 17 compiler targeting Java 8 against Android API 35.
-- Android resources and manifest linked with Android build-tools 35 aapt2.
-- Bytecode converted with Android D8, min API 26.
-- APK aligned and signed; apksigner verifies v2 and v3 signatures.
-- Unicode data includes 3,953 fully-qualified emoji/component entries across 10 groups.
+## GitHub Actions
 
-Not performed:
-- Device/emulator installation or UI tests.
-- Actual Google API key validation or AI generation.
-- Full Gradle build, Android Lint, GitHub Actions run.
+[Build run 40283537217](https://github.com/tanimgaming31-ops/Maya-AI-Keyboard/actions/runs/40283537217), source commit 7004e0dabcfbc06b74782a0a2662a8e2c9b0e1fb:
+- All 16 executable phonetic test cases passed.
+- Gradle assembleDebug and lintDebug passed.
+- APK artifact Maya-AI-Keyboard-Preview uploaded successfully.
+- Fixed SDK setup to avoid the removed legacy tools package.
+- Fixed two lint errors using LinearLayout.VERTICAL.
+
+## Initial downloadable preview APK
+
+The APK under downloads/ was built with official Android command-line tools before CI setup. Java sources compiled against API 35; resources linked with aapt2; D8 min API 26; alignment and v2/v3 signatures verified. Its runtime behavior matches the source; the later source changes replace numeric orientation constants with equivalent named constants. The GitHub Actions artifact is the Gradle-built package.
+
+Unicode assets include 3,953 fully-qualified emoji/component entries in 10 groups.
+
+## Not tested
+
+- Device/emulator installation and keyboard UI behavior.
+- Real Google API key validation or AI generation.
 - Complete Bengali phonetic linguistic validation.
 
-The delivered APK was assembled with official Android command-line build tools directly.
-The Gradle project and workflow are included for subsequent builds. Do not treat compilation or signature verification as proof of correct runtime behavior.
+Compilation, lint and signature checks do not prove correct runtime behavior. Follow the phone test checklist in README-BN.md.
