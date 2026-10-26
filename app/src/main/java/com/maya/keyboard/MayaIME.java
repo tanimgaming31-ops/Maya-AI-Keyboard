@@ -29,7 +29,7 @@ public class MayaIME extends InputMethodService {
         } catch(Exception ignored) {}
     }
     @Override public View onCreateInputView() {
-        root=new LinearLayout(this); root.setOrientation(1); root.setPadding(dp(3),dp(6),dp(3),dp(6));
+        root=new LinearLayout(this); root.setOrientation(LinearLayout.VERTICAL); root.setPadding(dp(3),dp(6),dp(3),dp(6));
         root.setBackgroundColor(Color.rgb(12,15,27));
         root.setOnApplyWindowInsetsListener((v,insets)-> {
             int bottom=insets.getSystemWindowInsetBottom();

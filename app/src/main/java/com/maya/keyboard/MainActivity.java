@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
     @Override public void onCreate(Bundle b){
         super.onCreate(b);
         getWindow().setFlags(android.view.WindowManager.LayoutParams.FLAG_SECURE,android.view.WindowManager.LayoutParams.FLAG_SECURE);
-        ScrollView scroll=new ScrollView(this);root=new LinearLayout(this);root.setOrientation(1);root.setPadding(dp(18),dp(20),dp(18),dp(24));scroll.addView(root);setContentView(scroll);
+        ScrollView scroll=new ScrollView(this);root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setPadding(dp(18),dp(20),dp(18),dp(24));scroll.addView(root);setContentView(scroll);
         scroll.setOnApplyWindowInsetsListener((v,insets)->{root.setPadding(dp(18),dp(20)+insets.getSystemWindowInsetTop(),dp(18),dp(24)+insets.getSystemWindowInsetBottom());return insets;});
         label("MAYA  ·  AI Keyboard\nPreview 0.1");
         label("Offline typing · বাংলা / English / Tagalog / Indonesia\nAI uses Google only when you tap Send. No typing history is collected.");
